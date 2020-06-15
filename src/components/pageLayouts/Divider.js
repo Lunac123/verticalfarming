@@ -15,16 +15,18 @@ class Divider extends Component {
     }
     return (
       <div className={finalSize}>
-        {/* Check if there is a title from parent. If there is no title it will be used with social media icons. */}
-        {title ? (
-          <h2>{title}</h2>
-        ) : (
-          <span className="social-media-divider">
-            <p>Follow us on Social Media</p>
-            {/* Component for social media buttons so they can be used where ever needed on the site */}
-            <SocialMediaButtons />
-          </span>
-        )}
+        <div className="container">
+          {/* Check if there is a title from parent. If there is no title it will be used with social media icons. */}
+          {title ? (
+            <h2>{title}</h2>
+          ) : (
+            <span className="social-media-divider">
+              <p>Follow us on Social Media</p>
+              {/* Component for social media buttons so they can be used where ever needed on the site */}
+              <SocialMediaButtons />
+            </span>
+          )}
+        </div>
       </div>
     );
   }

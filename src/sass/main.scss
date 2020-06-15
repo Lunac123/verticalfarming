@@ -51,7 +51,7 @@ body {
 .footer {
   background-color: $grey;
   height: 100%;
-  margin-top: 15px;
+
   color: $white;
 }
 
@@ -69,9 +69,19 @@ label {
 input[type="text"],
 select,
 textarea {
+  padding: 10px 0 10px 10px;
+  margin-bottom: 15px;
+  width: calc(100% - 10px);
+}
+
+#message {
+  height: 150px;
+}
+#newsletter {
   width: 70%;
   padding: 7px 0;
 }
+
 .button,
 input[type="button"],
 input[type="submit"] {
@@ -105,7 +115,7 @@ input[type="submit"] {
 }
 
 .divider-front-large {
-  margin: 20px 0;
+  margin: 0;
   width: 100%;
   height: 100%;
 }
@@ -121,13 +131,13 @@ input[type="submit"] {
   color: white;
 
   h2 {
-    margin-left: 10px;
+    margin: 0 0 0 15px;
     padding: 15px 0 15px 0;
     // font-size: 1.5em;
     // display: inline-block;
   }
   span {
-    padding: 5px 0;
+    padding: 5px 0 0 0;
     display: inline-block;
   }
 }
@@ -151,6 +161,49 @@ input[type="submit"] {
   }
 }
 
+// Contact info
+.contact-info {
+  background-color: $light-orange;
+}
+.contact-adress-wrapper {
+  h4 {
+    margin: 0;
+  }
+  p {
+    line-height: 0.8;
+  }
+}
+.map-image {
+  background-image: url("../img/map.jpg");
+  width: calc(100% - 10px);
+  height: 200px;
+  overflow: hidden;
+}
+.contact-header:before {
+  content: "";
+  background-image: url("../img/email-icon.svg");
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  padding-top: 5px;
+}
+.find-us-header h4 {
+  margin: 0;
+}
+.find-us-header:before {
+  content: "";
+  background-image: url("../img/map-icon.svg");
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  padding-top: 5px;
+}
 // ICONS
 
 .facebook-icon {
