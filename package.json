@@ -1,7 +1,7 @@
 {
   "name": "y",
   "version": "1.0.0",
-  "description": "react template built from the ground up",
+  "description": "Vertical Farming project",
   "main": "webpack.config.js",
   "scripts": {
     "check-scripts": "npm-check",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leegould119/reaact-starter-template.git"
+    "url": "git+https://github.com/Lunac123/verticalfarming.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leegould119/reaact-starter-template/issues"
+    "url": "https://github.com/Lunac123/verticalfarming/issues"
   },
-  "homepage": "https://github.com/leegould119/reaact-starter-template#readme",
+  "homepage": "https://github.com/Lunac123/verticalfarming#readme",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/plugin-proposal-class-properties": "^7.10.1",

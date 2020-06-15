@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap");
-@import "simple-grid", "colors";
-// "typography";
+@import "simple-grid", "colors", "typography";
 
 body {
   height: 100%;
@@ -76,7 +75,7 @@ input[type="submit"] {
   border-radius: 15px;
 }
 
-.image-front {
+.slider-front {
   width: 100%;
   height: 300px;
   background-image: url("../img/verticalfarming.jpg");
@@ -88,11 +87,16 @@ input[type="submit"] {
 .divider-front-page {
   background-color: #444444;
   margin: 20px 0;
-}
-
-.divider-front-page h1 {
   color: white;
-  padding: 15px 0 15px 0;
-  margin-left: 10px;
-  font-size: 16px;
+
+  h2 {
+    margin-left: 10px;
+    padding: 15px 0 15px 0;
+    // font-size: 1.5em;
+    // display: inline-block;
+  }
+  span {
+    padding: 5px 0;
+    display: inline-block;
+  }
 }
