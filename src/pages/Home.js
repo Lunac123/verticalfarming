@@ -8,9 +8,10 @@ export class Home extends Component {
     return (
       <div className="container">
         <FrontPageSlider />
-        <Divider />
-        <Divider title="Products" />
-        <Divider title="Contact" />
+        <Divider size="small" />
+
+        <Divider size="large" title="Products" />
+        <Divider size="large" title="Contact" />
       </div>
     );
   }

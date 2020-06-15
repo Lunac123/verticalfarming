@@ -6,12 +6,12 @@ export class FrontPageSlider extends Component {
       <section>
         <div className="slider-front">
           <div className="container">
-            <p>
+            <span>
               Ut ut ipsum consectetur enim pariatur sint. In velit enim duis
               officia excepteur amet nulla aute adipisicing esse cillum eiusmod
               est. Excepteur enim sint aliquip Lorem esse veniam ex exercitation
               aliquip consequat adipisicing occaecat non cupidatat.
-            </p>
+            </span>
           </div>
         </div>
       </section>

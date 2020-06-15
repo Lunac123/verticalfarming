@@ -12,7 +12,7 @@ import Home from "../pages/Home";
 
 //Components
 import Header from "./common/Header";
-
+import Footer from "./common/Footer";
 import history from "./common/history";
 class App extends Component {
   render() {
@@ -26,6 +26,7 @@ class App extends Component {
               render={(props) => <Home products={productData} {...props} />}
             />
           </Switch>
+          <Footer />
         </Router>
       </React.Fragment>
     );
