@@ -5,8 +5,7 @@ class Divider extends Component {
     let { title, size } = this.props;
 
     // Check if the size is large or small
-    // This way the Divider can be used with different css sizes and in different
-    // ways without making more divider components
+    // This way the Divider can be used with different css sizes without making more divider components
     let finalSize = "";
     if (size === "small") {
       finalSize = "divider-front-small";
@@ -22,7 +21,7 @@ class Divider extends Component {
           ) : (
             <span className="social-media-divider">
               <p>Follow us on Social Media</p>
-              {/* Component for social media buttons so they can be used where ever needed on the site */}
+              {/* Component for social media buttons so they can be used whereever needed on the site */}
               <SocialMediaButtons />
             </span>
           )}

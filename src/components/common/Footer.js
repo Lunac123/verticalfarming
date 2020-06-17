@@ -30,7 +30,7 @@ export class Footer extends Component {
                 </div>
               </form>
               <div className="row">
-                <p className="copyright">&copy; Micke Design</p>
+                <p className="copyright">&copy; Micke S</p>
               </div>
             </div>
           </div>
