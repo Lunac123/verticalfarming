@@ -9,6 +9,7 @@ import "../sass/main.scss";
 
 // Pages
 import Home from "../pages/Home";
+import Products from "../pages/Products";
 
 //Components
 import Header from "./common/Header";
@@ -22,8 +23,13 @@ class App extends Component {
           <Header />
           <Switch>
             <Route
+              exact
               path="/"
               render={(props) => <Home products={productData} {...props} />}
+            />
+            <Route
+              path="/products"
+              render={(props) => <Products products={productData} {...props} />}
             />
           </Switch>
           <Footer />

@@ -7,7 +7,7 @@ class ProductShowcase extends Component {
       imageId: 0,
       startId: 0,
       endOfSlice: 3,
-      numberOfImages: 3,
+      numberOfImages: this.props.numberOfImages,
       arrayLength: this.props.products.length,
       products: this.props.products
     };

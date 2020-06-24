@@ -23,6 +23,13 @@ body {
     object-fit: cover;
   }
 }
+.top-image {
+  // width: 100%;
+  height: 250px;
+  // background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 /* 
 ----------------------------------------------------------
     HEADER
@@ -55,8 +62,8 @@ body {
   color: $white;
   font-weight: $regular;
   font-size: 1.5em;
-  margin-top: 9px;
-  margin-left: 20px;
+  margin-top: 5px;
+  // margin-left: 20px;
 }
 // FOOTER
 

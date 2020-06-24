@@ -9,9 +9,10 @@ class navigation extends Component {
           <span className="logo">Vertical Farming</span>
           <nav>
             <Link to="/">Home</Link>
-            {/* <Link to="/products">Products</Link>
-            <Link to="/aboutus">About us</Link>
-            <Link to="/contact">Contact us</Link> */}
+            <Link to="/products">Products</Link>
+            {/* <Link to="/aboutus">About us</Link>
+            <Link to="/contact">Contact us</Link> */}{" "}
+            */}
           </nav>
         </div>
       </header>
