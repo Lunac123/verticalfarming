@@ -10,6 +10,8 @@ import "../sass/main.scss";
 // Pages
 import Home from "../pages/Home";
 import Products from "../pages/Products";
+import Product from "../pages/Product";
+import AboutUs from "../pages/Aboutus";
 
 //Components
 import Header from "./common/Header";
@@ -31,6 +33,17 @@ class App extends Component {
               path="/products"
               render={(props) => <Products products={productData} {...props} />}
             />
+            <Route
+              path="/product/:slug"
+              render={({ match }) => {
+                const product = productData.find(
+                  (data) => data.slug === match.params.slug
+                );
+                return <Product product={product} />;
+              }}
+              // render={(props) => <Product products={productData} {...props} />}
+            />
+            <Route path="/aboutus" render={() => <AboutUs />} />
           </Switch>
           <Footer />
         </Router>

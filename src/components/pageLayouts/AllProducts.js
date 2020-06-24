@@ -3,13 +3,18 @@ import React, { Component } from "react";
 class AllProducts extends Component {
   render() {
     let { products } = this.props;
+
     let allProducts = products.map((product) => {
+      let productLink = "/product/" + product.slug;
       return (
-        <div key={product.id} className="col-3">
-          <h3>{product.title}</h3>
-          <img src={product.img} width="100%" />
-          <p>{product.description}</p>
-        </div>
+        // `url(${item.imageLink})`
+        <a key={product.id} href={productLink}>
+          <div className="col-3">
+            <h3>{product.title}</h3>
+            <img src={product.img} width="100%" />
+            <p>{product.description}</p>
+          </div>
+        </a>
       );
     });
     return <div className="row">{allProducts}</div>;
