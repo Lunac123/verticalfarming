@@ -9,7 +9,7 @@ export class Home extends Component {
     let { products } = this.props;
 
     return (
-      <div>
+      <React.Fragment>
         <FrontPageSlider />
         <Divider size="small" />
         <AboutUs />
@@ -17,7 +17,7 @@ export class Home extends Component {
         <ProductShowcase products={products} numberOfImages={3} />
         <Divider size="large" title="Contact" />
         <ContactLayout />
-      </div>
+      </React.Fragment>
     );
   }
 }

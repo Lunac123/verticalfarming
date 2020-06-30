@@ -2,7 +2,9 @@ const productData = [
   {
     id: 1,
     title: "Red Mustard",
-    description: "Description for Red mustard",
+    shortDesc: "Description for Red mustard",
+    longDescription:
+      "Laboris nisi nulla qui enim. Veniam magna ipsum cupidatat consectetur laboris sunt proident elit eu. Non anim ad velit proident qui sunt nostrud veniam ullamco nisi. Voluptate ex eu excepteur nostrud nulla mollit nulla culpa ullamco. Aliqua consectetur ullamco duis sunt culpa Lorem non aute reprehenderit cupidatat deserunt adipisicing Lorem.",
     img: "src/img/products/redmustard.jpg",
     delivery: {
       target: "delivery",
@@ -27,7 +29,9 @@ const productData = [
   {
     id: 2,
     title: "Basil",
-    description: "Description for Basil",
+    shortDesc: "Description for Basil",
+    longDescription:
+      "Excepteur sit ea sit non proident sint aute duis incididunt esse veniam velit sint. Pariatur pariatur dolore amet exercitation dolor sit consequat. Culpa do laboris adipisicing deserunt.",
     img: "src/img/products/basil.jpg",
     delivery: {
       target: "delivery",
@@ -51,7 +55,9 @@ const productData = [
   {
     id: 3,
     title: "Radish Cress",
-    description: "Description for Radish Cress",
+    shortDesc: "Description for Radish Cress.",
+    longDescription:
+      "Laborum eu consectetur deserunt voluptate dolor qui sunt proident nostrud. Eiusmod ad Lorem in officia qui enim duis. Esse excepteur laborum laborum esse dolor enim ullamco. Eu mollit id officia excepteur occaecat ipsum tempor aliquip consectetur sit nulla non ex consectetur. Consectetur in minim qui ipsum in.",
     img: "src/img/products/radish_cress.jpg",
     delivery: {
       target: "delivery",
@@ -75,7 +81,9 @@ const productData = [
   {
     id: 4,
     title: "Spicy Mustard",
-    description: "Description for Spicy Mustard",
+    shortDesc: "Description for Spicy Mustard.",
+    longDescription:
+      "Aliqua ex officia sunt duis do. Et laboris veniam tempor in duis culpa aliquip officia sint aute voluptate culpa qui elit. Et ad ex cillum occaecat adipisicing non officia ipsum do velit officia ullamco deserunt culpa. Proident do reprehenderit adipisicing qui incididunt amet enim irure pariatur esse mollit commodo et et. Id laborum cillum eiusmod veniam labore magna. Reprehenderit aliqua pariatur elit consectetur consectetur qui voluptate sit. Exercitation aliqua culpa reprehenderit ex duis irure occaecat do veniam esse.",
     img: "src/img/products/spicymustard.jpg",
     delivery: {
       target: "delivery",
@@ -99,8 +107,10 @@ const productData = [
   {
     id: 5,
     title: "Mix",
-    description:
-      "Description for Mix of Kale, cabbage, radish cress and wheat grass",
+    shortDesc:
+      "Description for Mix of Kale, cabbage, radish cress and wheat grass.",
+    longDescription:
+      "Eu deserunt quis do nulla. Deserunt consequat occaecat proident ad et reprehenderit nulla mollit nulla est labore eiusmod ullamco reprehenderit. Dolor eiusmod voluptate ullamco labore nisi aliquip ex est tempor laboris ut excepteur Lorem ad. Sit non non commodo consequat officia qui amet quis.",
     img: "src/img/products/kale-cabbage-radishcress-wheatgrass-mix.jpg",
     delivery: {
       target: "delivery",

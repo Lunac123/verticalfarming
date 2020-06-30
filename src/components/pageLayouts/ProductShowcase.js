@@ -56,24 +56,25 @@ class ProductShowcase extends Component {
     let productComponents = products
       .slice(imageId, endOfSlice)
       .map((products) => {
+        let productLink = "/product/" + products.slug;
         return (
-          <div key={products.id} className="col-4">
-            <h3>{products.title}</h3>
-            <img src={products.img} width="100%" />
-            <p>{products.description}</p>
-          </div>
+          <a key={products.id} href={productLink}>
+            <div key={products.id} className="col-4">
+              <h3>{products.title}</h3>
+              <img src={"../" + products.img} width="100%" />
+              <p>{products.shortDesc}</p>
+            </div>
+          </a>
         );
       });
 
     return (
-      <div className="container">
-        <div className="row">
-          <a className="prev-button" onClick={this.prev} />
-
-          {productComponents}
-
-          <a className="next-button" onClick={this.next} />
+      <div className="product-showcase-wrapper">
+        <a className="prev-button" onClick={this.prev} />
+        <div className="container">
+          <div className="row">{productComponents}</div>
         </div>
+        <a className="next-button" onClick={this.next} />
       </div>
     );
   }

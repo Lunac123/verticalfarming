@@ -23,29 +23,33 @@ class App extends Component {
       <React.Fragment>
         <Router history={history}>
           <Header />
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={(props) => <Home products={productData} {...props} />}
-            />
-            <Route
-              path="/products"
-              render={(props) => <Products products={productData} {...props} />}
-            />
-            {/* the :slug is for sending data with URL's */}
-            <Route
-              path="/product/:slug"
-              render={({ match }) => {
-                const product = productData.find(
-                  (data) => data.slug === match.params.slug
-                );
-                return <Product product={product} />;
-              }}
-              // render={(props) => <Product products={productData} {...props} />}
-            />
-            <Route path="/aboutus" render={() => <AboutUs />} />
-          </Switch>
+          <div className="main">
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={(props) => <Home products={productData} {...props} />}
+              />
+              <Route
+                path="/products"
+                render={(props) => (
+                  <Products products={productData} {...props} />
+                )}
+              />
+              {/* the :slug is for sending data with URL's */}
+              <Route
+                path="/product/:slug"
+                render={({ match }) => {
+                  const product = productData.find(
+                    (data) => data.slug === match.params.slug
+                  );
+                  return <Product product={product} products={productData} />;
+                }}
+                // render={(props) => <Product products={productData} {...props} />}
+              />
+              <Route path="/aboutus" render={() => <AboutUs />} />
+            </Switch>
+          </div>
           <Footer />
         </Router>
       </React.Fragment>

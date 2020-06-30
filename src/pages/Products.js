@@ -10,17 +10,19 @@ class Products extends Component {
       <React.Fragment>
         <TopImage image={setImage} />
         <Divider size="small" />
-        <div className="container">
-          <div className="row">
-            <h1>Products</h1>
-            <p>
-              Tempor esse mollit amet veniam excepteur anim est non Lorem tempor
-              nostrud veniam excepteur. Enim deserunt elit excepteur consectetur
-              laborum est reprehenderit eiusmod aliquip adipisicing pariatur
-              excepteur eu dolore.
-            </p>
+        <div className="multi-product-wrapper">
+          <div className="container">
+            <div className="row">
+              <h1>Products</h1>
+              <p>
+                Tempor esse mollit amet veniam excepteur anim est non Lorem
+                tempor nostrud veniam excepteur. Enim deserunt elit excepteur
+                consectetur laborum est reprehenderit eiusmod aliquip
+                adipisicing pariatur excepteur eu dolore.
+              </p>
+            </div>
+            <AllProducts products={products} />
           </div>
-          <AllProducts products={products} />
         </div>
       </React.Fragment>
     );

@@ -6,7 +6,9 @@ class navigation extends Component {
     return (
       <header className="header">
         <div className="container">
-          <span className="logo">Vertical Farming</span>
+          <Link to="/">
+            <span className="logo">Vertical Farming</span>
+          </Link>
           <nav>
             <Link to="/">Home</Link>
             <Link to="/products">Products</Link>

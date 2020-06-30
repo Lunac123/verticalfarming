@@ -1,13 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap");
 @import "simple-grid", "colors", "typography";
 
+html,
 body {
-  height: 100%;
+  // min-height: 100%;
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   left: 0;
   top: 0;
+}
+// Flex is so the footer is always at the bottom until the container is filled. Then it is pushed down.
+#app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.main {
+  flex: 1;
 }
 .front-padding {
   padding: 10px 0;
@@ -16,7 +27,6 @@ a {
   text-decoration: none;
   color: $black;
 }
-
 .about-image-wrapper {
   // width: 100%;
   // height: 300px;
@@ -34,23 +44,16 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 }
-.panel-header {
-  background-color: #ccc;
-  color: #444;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  border-bottom: 1px solid black;
-  outline: none;
-  transition: 0.4s;
+
+.panel-wrapper {
+  padding: 0 18px;
+  background-color: white;
+
+  // overflow: hidden;
 }
-
-// .panel-header {
-//   background-color: #ccc;
-//   border-bottom: 1px solid black;
-
-//   // transition: 0.4s;
-// }
+.panel-wrapper > div:first-of-type {
+  border-top: 1px solid black;
+}
 .panel-wrapper a {
   display: inline-block;
   padding-top: 20px;
@@ -64,34 +67,40 @@ a {
   text-transform: uppercase;
 }
 
-.panel-wrapper {
-  padding: 0 18px;
-  background-color: white;
+.panel-header {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid black;
+  outline: none;
+  transition: 0.4s;
 
-  overflow: hidden;
+  // .panel-header {
+  //   background-color: #ccc;
+  //   border-bottom: 1px solid black;
+
+  //   // transition: 0.4s;
+  // }
 }
+
 .panel-text {
-  // padding: 0 18px;
-  // width: 200px;
-  height: 100%;
-  background-color: white;
-
-  // transition: max-height 0.2s ease-out;
+  opacity: 0;
+  max-height: 0;
+  // overflow-y: hidden;
+  // height: 100%;
+  // background-color: white;
+  transition: all 0.2s ease-out;
+  margin: 0;
+}
+.panel-text.open {
+  max-height: 500px;
+  opacity: 1;
+  padding: 15px;
+  background-color: #fefefe;
 }
 
-.accord-enter {
-  height: 0px;
-}
-
-.accord-enter.accord-enter-active {
-  height: 100px;
-  transition: height 300ms ease-in;
-}
-
-.accord-leave.accord-leave-active {
-  height: 0px;
-  transition: height 300ms ease-out;
-}
 /* 
 ----------------------------------------------------------
     HEADER
@@ -131,9 +140,10 @@ a {
 
 .footer {
   background-color: $grey;
-  height: 100%;
 
+  height: 200px;
   color: $white;
+  clear: both;
 }
 
 .copyright {
@@ -168,7 +178,7 @@ textarea {
 .next-button {
   position: absolute;
   top: calc(50% - 20px);
-  right: 0;
+  right: 20px;
   background-image: url(../img/next.svg);
   background-repeat: no-repeat;
   width: 40px;
@@ -185,7 +195,7 @@ textarea {
   background-image: url(../img/prev.svg);
   position: absolute;
   top: calc(50% - 20px);
-  left: 0;
+  left: 20px;
 
   background-repeat: no-repeat;
   width: 40px;
@@ -281,6 +291,7 @@ input[type="submit"] {
 // Contact info
 .contact-info {
   background-color: $light-orange;
+  padding-bottom: 10px;
 }
 .contact-adress-wrapper {
   h4 {
@@ -351,4 +362,16 @@ input[type="submit"] {
   width: 20px;
   height: 20px;
   display: inline-block;
+}
+.multi-product-wrapper,
+.single-product-wrapper {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.single-product-wrapper img {
+  margin-bottom: 10px;
+}
+.product-showcase-wrapper {
+  min-height: 380px;
+  position: relative;
 }
