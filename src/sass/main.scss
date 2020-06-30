@@ -34,6 +34,64 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 }
+.panel-header {
+  background-color: #ccc;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid black;
+  outline: none;
+  transition: 0.4s;
+}
+
+// .panel-header {
+//   background-color: #ccc;
+//   border-bottom: 1px solid black;
+
+//   // transition: 0.4s;
+// }
+.panel-wrapper a {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: $black;
+  width: calc(100% - 15px);
+  margin-left: 15px;
+
+  text-transform: uppercase;
+}
+
+.panel-wrapper {
+  padding: 0 18px;
+  background-color: white;
+
+  overflow: hidden;
+}
+.panel-text {
+  // padding: 0 18px;
+  // width: 200px;
+  height: 100%;
+  background-color: white;
+
+  // transition: max-height 0.2s ease-out;
+}
+
+.accord-enter {
+  height: 0px;
+}
+
+.accord-enter.accord-enter-active {
+  height: 100px;
+  transition: height 300ms ease-in;
+}
+
+.accord-leave.accord-leave-active {
+  height: 0px;
+  transition: height 300ms ease-out;
+}
 /* 
 ----------------------------------------------------------
     HEADER

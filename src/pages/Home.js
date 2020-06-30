@@ -14,7 +14,7 @@ export class Home extends Component {
         <Divider size="small" />
         <AboutUs />
         <Divider size="large" title="Products" />
-        <ProductShowcase products={products} numberOfImages="3" />
+        <ProductShowcase products={products} numberOfImages={3} />
         <Divider size="large" title="Contact" />
         <ContactLayout />
       </div>

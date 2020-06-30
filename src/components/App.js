@@ -33,6 +33,7 @@ class App extends Component {
               path="/products"
               render={(props) => <Products products={productData} {...props} />}
             />
+            {/* the :slug is for sending data with URL's */}
             <Route
               path="/product/:slug"
               render={({ match }) => {

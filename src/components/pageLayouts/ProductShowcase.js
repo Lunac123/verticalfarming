@@ -22,7 +22,7 @@ class ProductShowcase extends Component {
       startId
     } = this.state;
     if (endOfSlice === arrayLength) {
-      this.setState({ imageId: startId, endOfSlice: numberOfImages });
+      this.setState({ imageId: 0, endOfSlice: numberOfImages });
       console.log("the numbers last: " + imageId, endOfSlice);
     } else {
       this.setState({ imageId: imageId + 1, endOfSlice: endOfSlice + 1 });
@@ -43,7 +43,15 @@ class ProductShowcase extends Component {
   };
 
   render() {
-    let { imageId, endOfSlice, products } = this.state;
+    let {
+      imageId,
+      endOfSlice,
+      products,
+      arrayLength,
+      numberOfImages
+    } = this.state;
+    console.log("number of imageId: " + typeof imageId);
+    console.log("number of endofslice: " + typeof endOfSlice);
 
     let productComponents = products
       .slice(imageId, endOfSlice)

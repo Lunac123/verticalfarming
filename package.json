@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "copy-webpack-plugin": "^6.0.2",
+    "react-transition-group": "^1.2.1",
     "webpack-cli": "^3.3.11"
   }
 }

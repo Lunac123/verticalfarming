@@ -83,3 +83,7 @@ https://prettier.io/docs/en/configuration.html
 - read more
   https://www.npmjs.com/package/npm-check
   - npm i -g npm-check
+
+## Installed React Transition Group
+
+- https://github.com/reactjs/react-transition-group/tree/v1-stable
