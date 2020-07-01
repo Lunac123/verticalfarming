@@ -12,7 +12,7 @@ class AllProducts extends Component {
         // `url(${item.imageLink})`
         <a key={product.id} href={productLink}>
           <div className="col-4">
-            <h3>{product.title}</h3>
+            <h5>{product.title}</h5>
             <img src={product.img} width="100%" />
             <p>{product.description}</p>
           </div>

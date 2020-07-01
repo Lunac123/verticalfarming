@@ -12,9 +12,14 @@ class ProductAccordion extends Component {
 
     return (
       <section className="panel-wrapper">
-        <div className="panel-header">
+        <div
+          className={
+            "panel-header " +
+            (productData.detailedDescription.showHide ? "open" : "")
+          }
+        >
           <a
-            id={productData.detailedDescription.target + productData.id}
+            // id={productData.detailedDescription.target + productData.id}
             className="panel-clicker"
             onClick={() => toggle(productData.detailedDescription.target)}
           >
@@ -30,9 +35,13 @@ class ProductAccordion extends Component {
           {productData.detailedDescription.info}
         </p>
 
-        <div className="panel-header">
+        <div
+          className={
+            "panel-header " + (productData.nutrients.showHide ? "open" : "")
+          }
+        >
           <a
-            id={productData.nutrients.target + productData.id}
+            // id={productData.nutrients.target + productData.id}
             className="panel-clicker"
             onClick={() => toggle(productData.nutrients.target)}
           >
@@ -48,9 +57,13 @@ class ProductAccordion extends Component {
           {productData.nutrients.info}
         </p>
 
-        <div className="panel-header">
+        <div
+          className={
+            "panel-header " + (productData.delivery.showHide ? "open" : "")
+          }
+        >
           <a
-            id={productData.delivery.target + productData.id}
+            // id={productData.delivery.target + productData.id}
             className="panel-clicker"
             onClick={() => toggle(productData.delivery.target)}
           >

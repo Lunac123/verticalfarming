@@ -50,8 +50,8 @@ class ProductShowcase extends Component {
       arrayLength,
       numberOfImages
     } = this.state;
-    console.log("number of imageId: " + typeof imageId);
-    console.log("number of endofslice: " + typeof endOfSlice);
+    // console.log("number of imageId: " + typeof imageId);
+    // console.log("number of endofslice: " + typeof endOfSlice);
 
     let productComponents = products
       .slice(imageId, endOfSlice)

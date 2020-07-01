@@ -6,7 +6,7 @@ class AboutUs extends Component {
       <div className="container front-padding">
         <div className="row">
           <div className="col-6 about-image-wrapper">
-            <img src="src/img/vertfarmbig.jpg" />
+            <img src="src/img/about-us.jpg" />
           </div>
           <div className="col-6 front-header">
             <h2 id="front-header">About us</h2>

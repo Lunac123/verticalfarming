@@ -5,7 +5,7 @@ import AllProducts from "../components/pageLayouts/AllProducts";
 class Products extends Component {
   render() {
     let { products } = this.props;
-    let setImage = "../src/img/verticalfarming.jpg";
+    let setImage = "../src/img/topbanner-greens.jpg";
     return (
       <React.Fragment>
         <TopImage image={setImage} />
