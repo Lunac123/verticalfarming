@@ -7,15 +7,18 @@ class ProductAccordion extends Component {
   };
 
   render() {
-    let { toggle } = this.props;
+    let { toggle, openNutrients, openDetailed, openDelivery } = this.props;
     let { productData } = this.state;
-
+    console.log("openDetailed in component: " + openDetailed);
+    console.log("openNutri in component: " + openNutrients);
+    console.log("openDelivery in component: " + openDelivery);
     return (
       <section className="panel-wrapper">
         <div
           className={
             "panel-header " +
-            (productData.detailedDescription.showHide ? "open" : "")
+            // (productData.detailedDescription.showHide ? "open" : "")
+            (openDetailed ? "open" : "")
           }
         >
           <a
@@ -29,7 +32,8 @@ class ProductAccordion extends Component {
         <p
           className={
             "panel-text " +
-            (productData.detailedDescription.showHide ? "open" : "")
+            // (productData.detailedDescription.showHide ? "open" : "")
+            (openDetailed ? "open" : "")
           }
         >
           {productData.detailedDescription.info}
@@ -37,7 +41,8 @@ class ProductAccordion extends Component {
 
         <div
           className={
-            "panel-header " + (productData.nutrients.showHide ? "open" : "")
+            // "panel-header " + (productData.nutrients.showHide ? "open" : "")
+            "panel-header " + (openNutrients ? "open" : "")
           }
         >
           <a
@@ -51,7 +56,8 @@ class ProductAccordion extends Component {
 
         <p
           className={
-            "panel-text " + (productData.nutrients.showHide ? "open" : "")
+            // "panel-text " + (productData.nutrients.showHide ? "open" : "")
+            "panel-text " + (openNutrients ? "open" : "")
           }
         >
           {productData.nutrients.info}
@@ -59,7 +65,8 @@ class ProductAccordion extends Component {
 
         <div
           className={
-            "panel-header " + (productData.delivery.showHide ? "open" : "")
+            // "panel-header " + (productData.delivery.showHide ? "open" : "")
+            "panel-header " + (openDelivery ? "open" : "")
           }
         >
           <a
@@ -73,7 +80,8 @@ class ProductAccordion extends Component {
 
         <p
           className={
-            "panel-text " + (productData.delivery.showHide ? "open" : "")
+            // "panel-text " + (productData.delivery.showHide ? "open" : "")
+            "panel-text " + (openDelivery ? "open" : "")
           }
         >
           {productData.delivery.info}

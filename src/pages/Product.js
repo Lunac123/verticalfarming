@@ -9,33 +9,40 @@ class Products extends Component {
     super(props);
     this.state = {
       product: this.props.product,
-      products: this.props.products
+      products: this.props.products,
+      openDetailed: false,
+      openNutrients: false,
+      openDelivery: false
     };
   }
 
-  toggle = (details) => {
-    let { product } = this.state;
-    // e.preventDefault();
+  toggle = (target) => {
+    let { product, openDelivery, openDetailed, openNutrients } = this.state;
 
-    if (product.detailedDescription.target === details) {
-      product.detailedDescription.showHide = true;
-      product.nutrients.showHide = false;
-      product.delivery.showHide = false;
-    } else if (product.nutrients.target === details) {
-      product.detailedDescription.showHide = false;
-      product.nutrients.showHide = true;
-      product.delivery.showHide = false;
-    } else if (product.delivery.target === details) {
-      product.detailedDescription.showHide = false;
-      product.nutrients.showHide = false;
-      product.delivery.showHide = true;
+    if (product.detailedDescription.target === target) {
+      this.setState({ openDetailed: !this.state.openDetailed });
+      this.setState({ openNutrients: false });
+      this.setState({ openDelivery: false });
+    } else if (product.nutrients.target === target) {
+      this.setState({ openDetailed: false });
+      this.setState({ openNutrients: !this.state.openNutrients });
+      this.setState({ openDelivery: false });
+    } else if (product.delivery.target === target) {
+      this.setState({ openDetailed: false });
+      this.setState({ openNutrients: false });
+      this.setState({ openDelivery: !this.state.openDelivery });
     }
-    this.setState({ product });
   };
 
   render() {
-    let { product, products } = this.state;
-
+    let {
+      product,
+      products,
+      openDelivery,
+      openDetailed,
+      openNutrients
+    } = this.state;
+    console.log("openDetailed in render : " + openDetailed);
     // console.log("prodct: " + JSON.stringify(product));
     // const baseUrl = "/product/";
     // const slug = props.match.params.slug;
@@ -57,7 +64,13 @@ class Products extends Component {
             </div>
           </div>
           <div className="row">
-            <ProductAccordion productData={product} toggle={this.toggle} />
+            <ProductAccordion
+              productData={product}
+              toggle={this.toggle}
+              openDetailed={openDetailed}
+              openNutrients={openNutrients}
+              openDelivery={openDelivery}
+            />
           </div>
         </div>
         <Divider size="large" title="Similar Products" />

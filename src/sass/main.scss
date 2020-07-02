@@ -297,16 +297,32 @@ input[type="submit"] {
 }
 
 // Slider
-.slider-front {
+.slider-wrapper {
   width: 100%;
   height: 500px;
-  background-image: url("../img/slider1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+
   span {
     color: $white;
   }
+}
+.slider-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.slider-text {
+  background-color: rgba(20, 20, 20, 0.5);
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  font-weight: 700;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .divider-front-large {
